@@ -9,3 +9,28 @@
     }
   }
 }
+
+@mixin opacity($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+      @if $breakpoint != xs {
+        @each $o in $opacity {
+          .opacity-#{$breakpoint}-#{$o} {
+            @if $o == 0 {
+              opacity: 0;
+            } @else if $o == 100 {
+              opacity: 1;
+            } @else {
+              opacity: calc(#{$o} * 0.01);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @include opacity(sm);
+// @include opacity(md);
+@include opacity(lg);
+// @include opacity(xl);
