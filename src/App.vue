@@ -15,7 +15,7 @@
             <v-spacer />
           </v-toolbar-title>
         </v-toolbar>
-        <v-expansion-panels v-model="panel" accordion>
+        <v-expansion-panels v-model="panel">
           <v-expansion-panel>
             <v-expansion-panel-header>border</v-expansion-panel-header>
             <v-expansion-panel-content><CssBorder /></v-expansion-panel-content>
@@ -57,7 +57,7 @@ export default {
   },
   data() {
     return {
-      panel: [],
+      panel: [1],
     };
   },
 };

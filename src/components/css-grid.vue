@@ -2,13 +2,13 @@
   <v-row>
     <v-col cols="12">
       <h3>CSS Grid</h3>
-      <div class="mb-4">
+      <v-subheader class="my-4">
         model: {
         <br />
         &nbsp;&nbsp;{{ grid }}
         <br />
         }
-      </div>
+      </v-subheader>
       <div :class="grid">
         <div v-for="(item, index) in 12" :key="index" class="pa-4 text-center border">
           {{ item }}
@@ -17,13 +17,13 @@
     </v-col>
     <v-col cols="12">
       <h3>Vuetify base classes `v-row > v-col`</h3>
-      <div class="mb-4">
+      <v-subheader class="my-4">
         model: {
         <br />
         &nbsp;&nbsp;{{ flex }}
         <br />
         }
-      </div>
+      </v-subheader>
       <v-row>
         <v-col v-for="(item, index) in 12" :key="index" :class="flex">
           <div class="pa-4 text-center border">
