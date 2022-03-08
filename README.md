@@ -19,7 +19,7 @@ Tutorial [How to use CSS Grid][how-to-use-grid]
 If you are using Vue CLI add to `main.js`
 
 ```js
-import VuetifyCssGrid from "@/sass/extends/vuetify-css-grid.scss";
+import VuetifyCssGrid from "@/sass/extends/vuetify-css-border.scss";
 
 new Vue({
   VuetifyCssBorder,
