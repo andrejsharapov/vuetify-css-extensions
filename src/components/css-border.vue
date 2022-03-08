@@ -68,3 +68,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import '~/src/sass/extends/vuetify-css-border.scss';
+</style>
