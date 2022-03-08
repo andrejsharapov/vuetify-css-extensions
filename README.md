@@ -3,16 +3,22 @@
 Mini CSS extensions for Vuetify.js
 
 1. [vuetify-css-border.scss][border]
-2. [vuetify-css-grid.scss][grid] : [guide: how to use][how-to-use-grid]
+2. [vuetify-css-grid.scss][grid]
 3. [vuetify-css-index.scss][index]
 4. [vuetify-css-line-clamp.scss][line-clamp]
 5. [vuetify-css-opacity.scss][opacity]
+
+## Use
+
+You can easily use any of these extensions as normal [Vuetify 2][vuetify] classes inside your components. It is enough just to import the necessary styles into your application. The examples are in the [components][examples] folder.
+
+Tutorial [How to use CSS Grid][how-to-use-grid]
 
 ## Import
 
 If you are using Vue CLI add to `main.js`
 
-```bash
+```js
 import VuetifyCssGrid from "@/sass/extends/vuetify-css-grid.scss";
 
 new Vue({
@@ -21,7 +27,7 @@ new Vue({
 
 ```
 
-or use it via `style lang='scss'` directly in components
+or use it via `<style lang='scss'></style>` directly in components
 
 ```js
 <style lang="scss">
@@ -29,7 +35,18 @@ or use it via `style lang='scss'` directly in components
 </style>
 ```
 
-[vuetify]: https://vuetifyjs.com/en/
+If you’re using [nuxt] like I am, you can add styles to the nuxt.config.* file.
+
+```js
+export default {
+  css: [
+    { src: '~/base-dir/path/vuetify-css-***', lang: 'scss' },
+  ],
+}
+```
+
+[vuetify]: https://github.com/vuetifyjs/vuetify
+[nuxt]: https://github.com/nuxt/nuxt.js
 [border]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-border.scss
 [grid]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-grid.scss
 [index]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-index.scss
@@ -37,3 +54,4 @@ or use it via `style lang='scss'` directly in components
 [opacity]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-opacity.scss
 
 [how-to-use-grid]: https://dev.to/andrejsharapov/vuetify-use-css-grid-classes-17nl
+[examples]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/components
