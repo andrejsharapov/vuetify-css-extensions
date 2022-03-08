@@ -10,3 +10,25 @@
     overflow: hidden;
   }
 }
+
+@mixin line-clamp($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+      @if $breakpoint != xs {
+        @each $lc in $line-clamp {
+          .line-clamp-#{$breakpoint}-#{$lc} {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: #{$lc};
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include line-clamp(sm);
+@include line-clamp(md);
+@include line-clamp(lg);
+@include line-clamp(xl);
