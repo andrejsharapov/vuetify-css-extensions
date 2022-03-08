@@ -35,7 +35,7 @@ or use it via `<style lang='scss'></style>` directly in components
 </style>
 ```
 
-If you’re using [nuxt] like I am, you can add styles to the nuxt.config.* file.
+If you’re using [nuxt] you can add styles to the nuxt.config.* file.
 
 ```js
 export default {
