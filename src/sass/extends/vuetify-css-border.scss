@@ -1,0 +1,77 @@
+.border-none {
+  border: 0;
+}
+
+.border {
+  border: $bd;
+}
+
+@each $bd in $borders {
+  .border-#{$bd} {
+    border-width: #{$bd}px;
+  }
+}
+
+.border-x {
+  border-left-width: $bd;
+  border-right-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-x-#{$bd} {
+    border-left-width: #{$bd}px;
+    border-right-width: #{$bd}px;
+  }
+}
+
+.border-y {
+  border-top-width: $bd;
+  border-bottom-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-y-#{$bd} {
+    border-top-width: #{$bd}px;
+    border-bottom-width: #{$bd}px;
+  }
+}
+
+.border-t {
+  border-top-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-t-#{$bd} {
+    border-top-width: #{$bd}px;
+  }
+}
+
+.border-r {
+  border-right-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-r-#{$bd} {
+    border-right-width: #{$bd}px;
+  }
+}
+
+.border-b {
+  border-bottom-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-b-#{$bd} {
+    border-bottom-width: #{$bd}px;
+  }
+}
+
+.border-l {
+  border-left-width: $bd;
+}
+
+@each $bd in $borders {
+  .border-l-#{$bd} {
+    border-left-width: #{$bd}px;
+  }
+}

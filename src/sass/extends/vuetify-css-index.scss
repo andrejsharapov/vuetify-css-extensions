@@ -1,0 +1,11 @@
+@each $z in $index {
+  @if $z == 0 {
+    .z-index-none {
+      z-index: 0;
+    }
+  } @else {
+    .z-index-#{$z} {
+      z-index: #{$z};
+    }
+  }
+}

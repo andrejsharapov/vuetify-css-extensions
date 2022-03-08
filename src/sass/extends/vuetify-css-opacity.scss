@@ -1,0 +1,11 @@
+@each $o in $opacity {
+  .opacity-#{$o} {
+    @if $o == 0 {
+      opacity: 0;
+    } @else if $o == 100 {
+      opacity: 1;
+    } @else {
+      opacity: calc(#{$o} * 0.01);
+    }
+  }
+}

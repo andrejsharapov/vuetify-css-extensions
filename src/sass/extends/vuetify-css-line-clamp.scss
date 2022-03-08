@@ -1,0 +1,12 @@
+.line-clamp-none {
+  -webkit-line-clamp: unset;
+}
+
+@each $lc in $line-clamp {
+  .line-clamp-#{$lc} {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$lc};
+    overflow: hidden;
+  }
+}

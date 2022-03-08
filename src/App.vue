@@ -1,28 +1,78 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-toolbar flat color="transparent">
+          <v-toolbar-title class="grow d-sm-flex">
+            <v-spacer />
+            <pre>window: {{ $vuetify.breakpoint.width }}px</pre>
+          </v-toolbar-title>
+        </v-toolbar>
+        <v-expansion-panels v-model="panel" accordion>
+          <v-expansion-panel>
+            <v-expansion-panel-header>border</v-expansion-panel-header>
+            <v-expansion-panel-content><CssBorder /></v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
+            <v-expansion-panel-header>grid css</v-expansion-panel-header>
+            <v-expansion-panel-content><CssGrid /></v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
+            <v-expansion-panel-header>line-clamp</v-expansion-panel-header>
+            <v-expansion-panel-content><CssLineClamp /></v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
+            <v-expansion-panel-header>opacity</v-expansion-panel-header>
+            <v-expansion-panel-content><CssOpacity /></v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CssGrid from "./components/css-grid";
+import CssLineClamp from "./components/css-line-clamp";
+import CssOpacity from "./components/css-opacity";
+import CssBorder from "./components/css-border";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CssGrid,
+    CssLineClamp,
+    CssOpacity,
+    CssBorder,
+  },
+  data() {
+    return {
+      panel: [],
+    }
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+// TEST checking the health of breakpoints
+// this.$vuetify.breakpoint.width
+@mixin bg($breakpoint)
+  @if map-has-key($grid-breakpoints, $breakpoint)
+    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)})
+      @content
+
+.v-main
+  @include bg(xs)
+    background: #fc5f5f
+  @include bg(sm)
+    background: #fcf05f
+  @include bg(md)
+    background: #90e89f
+  @include bg(lg)
+    background: #909be8
+  @include bg(xl)
+    background: #ce90e8
 </style>
