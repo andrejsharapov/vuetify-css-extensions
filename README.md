@@ -45,8 +45,11 @@ export default {
 }
 ```
 
+Before you start using them, copy the variables you need and put them in your [variables.scss][variables] file.
+
 [vuetify]: https://github.com/vuetifyjs/vuetify
 [nuxt]: https://github.com/nuxt/nuxt.js
+[variables]: https://github.com/andrejsharapov/vuetify-css-extensions/blob/master/src/sass/variables.scss
 [border]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-border.scss
 [grid]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-grid.scss
 [index]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-index.scss
