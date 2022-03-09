@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       msg: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae debitis quo facilis beatae nesciunt vitae cupiditate aut dignissimos, labore quos, iure magni. Debitis dicta cupiditate nemo voluptatibus repellat illum impedit!",
-      clamps: [0, 1, 2, 3, 4, 5, 6],
+      clamps: ['none', 1, 2, 3, 4, 5, 6],
     };
   },
 };

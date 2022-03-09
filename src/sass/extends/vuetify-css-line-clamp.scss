@@ -28,7 +28,9 @@
   }
 }
 
-@include line-clamp(sm);
-@include line-clamp(md);
-@include line-clamp(lg);
-@include line-clamp(xl);
+.v-application {
+  @include line-clamp(sm);
+  @include line-clamp(md);
+  @include line-clamp(lg);
+  @include line-clamp(xl);
+}
