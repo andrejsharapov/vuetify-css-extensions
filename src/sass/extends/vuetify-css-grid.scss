@@ -1,4 +1,4 @@
-@mixin mq($breakpoint) {
+@mixin grid($breakpoint) {
   @if map-has-key($grid-breakpoints, $breakpoint) {
     @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
       @if $breakpoint != xs {
@@ -325,8 +325,8 @@
 }
 
 .v-application {
-  @include mq(sm);
-  @include mq(md);
-  @include mq(lg);
-  @include mq(xl);
+  @include grid(sm);
+  @include grid(md);
+  @include grid(lg);
+  @include grid(xl);
 }
