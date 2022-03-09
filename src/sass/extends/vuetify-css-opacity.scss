@@ -30,7 +30,9 @@
   }
 }
 
-// @include opacity(sm);
-// @include opacity(md);
-@include opacity(lg);
-// @include opacity(xl);
+.v-application {
+  // @include opacity(sm);
+  // @include opacity(md);
+  @include opacity(lg);
+  // @include opacity(xl);
+}

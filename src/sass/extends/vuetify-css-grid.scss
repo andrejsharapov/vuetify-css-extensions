@@ -324,8 +324,9 @@
   }
 }
 
-// @include mq(xs);
-@include mq(sm);
-@include mq(md);
-@include mq(lg);
-@include mq(xl);
+.v-application {
+  @include mq(sm);
+  @include mq(md);
+  @include mq(lg);
+  @include mq(xl);
+}
