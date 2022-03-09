@@ -35,6 +35,10 @@
             <v-expansion-panel-header>opacity</v-expansion-panel-header>
             <v-expansion-panel-content><CssOpacity /></v-expansion-panel-content>
           </v-expansion-panel>
+          <v-expansion-panel>
+            <v-expansion-panel-header>overflow</v-expansion-panel-header>
+            <v-expansion-panel-content><CssOverflow /></v-expansion-panel-content>
+          </v-expansion-panel>
         </v-expansion-panels>
       </v-container>
     </v-main>
@@ -46,6 +50,7 @@ import CssGrid from "./components/css-grid";
 import CssLineClamp from "./components/css-line-clamp";
 import CssOpacity from "./components/css-opacity";
 import CssBorder from "./components/css-border";
+import CssOverflow from "./components/css-overflow";
 
 export default {
   name: "App",
@@ -54,10 +59,11 @@ export default {
     CssLineClamp,
     CssOpacity,
     CssBorder,
+    CssOverflow,
   },
   data() {
     return {
-      panel: [1],
+      panel: [4],
     };
   },
 };

@@ -1,0 +1,140 @@
+@mixin overflow($breakpoint, $x: false, $y: false) {
+  .overflow-auto {
+    overflow: auto;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-clip {
+    overflow: clip;
+  }
+
+  .overflow-visible {
+    overflow: visible;
+  }
+
+  .overflow-scroll {
+    overflow: scroll;
+  }
+
+  @if $x {
+    .overflow-x-auto {
+      overflow-x: auto;
+    }
+
+    .overflow-x-hidden {
+      overflow-x: hidden;
+    }
+
+    .overflow-x-clip {
+      overflow-x: clip;
+    }
+
+    .overflow-x-visible {
+      overflow-x: visible;
+    }
+
+    .overflow-x-scroll {
+      overflow-x: scroll;
+    }
+  }
+
+  @if $y {
+    .overflow-y-auto {
+      overflow-y: auto;
+    }
+
+    .overflow-y-hidden {
+      overflow-y: hidden;
+    }
+
+    .overflow-y-clip {
+      overflow-y: clip;
+    }
+
+    .overflow-y-visible {
+      overflow-y: visible;
+    }
+
+    .overflow-y-scroll {
+      overflow-y: scroll;
+    }
+  }
+
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+      .overflow-#{$breakpoint}-auto {
+        overflow: auto !important;
+      }
+
+      .overflow-#{$breakpoint}-hidden {
+        overflow: hidden !important;
+      }
+
+      .overflow-#{$breakpoint}-clip {
+        overflow: clip !important;
+      }
+
+      .overflow-#{$breakpoint}-visible {
+        overflow: visible !important;
+      }
+
+      .overflow-#{$breakpoint}-scroll {
+        overflow: scroll !important;
+      }
+
+      @if $x {
+        .overflow-x-#{$breakpoint}-auto {
+          overflow-x: auto !important;
+        }
+
+        .overflow-x-#{$breakpoint}-hidden {
+          overflow-x: hidden !important;
+        }
+
+        .overflow-x-#{$breakpoint}-clip {
+          overflow-x: clip !important;
+        }
+
+        .overflow-x-#{$breakpoint}-visible {
+          overflow-x: visible !important;
+        }
+
+        .overflow-x-#{$breakpoint}-scroll {
+          overflow-x: scroll !important;
+        }
+      }
+
+      @if $y {
+        .overflow-y-#{$breakpoint}-auto {
+          overflow-y: auto !important;
+        }
+
+        .overflow-y-#{$breakpoint}-hidden {
+          overflow-y: hidden !important;
+        }
+
+        .overflow-y-#{$breakpoint}-clip {
+          overflow-y: clip !important;
+        }
+
+        .overflow-y-#{$breakpoint}-visible {
+          overflow-y: visible !important;
+        }
+
+        .overflow-y-#{$breakpoint}-scroll {
+          overflow-y: scroll !important;
+        }
+      }
+    }
+  }
+}
+
+.v-application {
+  @include overflow(sm, false, false);
+  @include overflow(md, x, y);
+  @include overflow(lg, x, y);
+  @include overflow(xl, false, y);
+}
