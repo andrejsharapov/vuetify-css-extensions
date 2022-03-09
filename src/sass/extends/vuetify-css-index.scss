@@ -1,11 +1,34 @@
+.z-index-none {
+  z-index: 0;
+}
+
 @each $z in $index {
-  @if $z == 0 {
-    .z-index-none {
-      z-index: 0;
-    }
-  } @else {
-    .z-index-#{$z} {
-      z-index: #{$z};
+  .z-index-#{$z} {
+    z-index: #{$z};
+  }
+}
+
+@mixin index($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+      @if $breakpoint != xs {
+        .z-index-#{$breakpoint}-none {
+          z-index: 0;
+        }
+
+        @each $z in $index {
+          .z-index-#{$breakpoint}-#{$z} {
+            z-index: #{$z};
+          }
+        }
+      }
     }
   }
+}
+
+.v-application {
+  @include index(sm);
+  @include index(md);
+  @include index(lg);
+  @include index(xl);
 }
