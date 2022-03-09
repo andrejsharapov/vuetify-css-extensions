@@ -7,6 +7,7 @@ Mini CSS extensions for Vuetify.js
 3. [vuetify-css-index.scss][index]
 4. [vuetify-css-line-clamp.scss][line-clamp]
 5. [vuetify-css-opacity.scss][opacity]
+6. [vuetify-css-overflow.scss][overflow]
 
 ## Use
 
@@ -49,12 +50,15 @@ Before you start using them, copy the variables you need and put them in your [v
 
 [vuetify]: https://github.com/vuetifyjs/vuetify
 [nuxt]: https://github.com/nuxt/nuxt.js
+
 [variables]: https://github.com/andrejsharapov/vuetify-css-extensions/blob/master/src/sass/variables.scss
+
 [border]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-border.scss
 [grid]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-grid.scss
 [index]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-index.scss
 [line-clamp]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-line-clamp.scss
 [opacity]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-opacity.scss
+[overflow]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-overflow.scss
 
 [how-to-use-grid]: https://dev.to/andrejsharapov/vuetify-use-css-grid-classes-17nl
 [examples]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/components
