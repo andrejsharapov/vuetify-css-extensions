@@ -6,8 +6,30 @@
           display: grid !important;
         }
 
+        .d-#{$breakpoint}-grid {
+          &.d-none,
+          &.d-inline,
+          &.d-inline-block,
+          &.d-block,
+          &.d-flex,
+          &.d-inline-flex {
+            display: grid !important;
+          }
+        }
+
         .d-#{$breakpoint}-inline-grid {
           display: inline-grid !important;
+        }
+
+        .d-#{$breakpoint}-inline-grid {
+          &.d-none,
+          &.d-inline,
+          &.d-inline-block,
+          &.d-block,
+          &.d-flex,
+          &.d-inline-flex {
+            display: inline-grid !important;
+          }
         }
 
         @for $gtc from 1 through 12 {
