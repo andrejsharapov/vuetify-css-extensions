@@ -9,6 +9,7 @@ import VuetifyCssLineClamp from "@/sass/extends/vuetify-css-line-clamp.scss";
 import VuetifyCssMaxWidth from "@/sass/extends/vuetify-css-max-width.scss";
 import VuetifyCssOpacity from "@/sass/extends/vuetify-css-opacity.scss";
 import VuetifyCssOverflow from "@/sass/extends/vuetify-css-overflow.scss";
+import VuetifyCssPosition from "@/sass/extends/vuetify-css-position.scss";
 
 Vue.config.productionTip = false;
 
@@ -21,5 +22,6 @@ new Vue({
   VuetifyCssMaxWidth,
   VuetifyCssOpacity,
   VuetifyCssOverflow,
+  VuetifyCssPosition,
   render: (h) => h(App),
 }).$mount("#app");

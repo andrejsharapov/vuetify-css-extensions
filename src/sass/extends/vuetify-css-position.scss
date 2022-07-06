@@ -1,0 +1,63 @@
+@mixin position($breakpoint) {
+  @each $pos in $positions {
+    .pos-#{$pos} {
+      position: #{$pos};
+    }
+
+    @if map-has-key($grid-breakpoints, $breakpoint) {
+      @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+        .pos-#{$breakpoint}-#{$pos} {
+          position: #{$pos} !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin position-side($breakpoint) {
+  @each $move in $move {
+    @each $side in top, right, bottom, left {
+      .#{$side}-#{$move} {
+        @if $move == 0 or $move == auto {
+          #{$side}: #{$move};
+        } @else if $move == full {
+          #{$side}: 100%;
+        } @else if $move == 33 {
+          #{$side}: calc(100% / 3);
+        } @else if $move == 66 {
+          #{$side}: calc(calc(100% / 3) * 2);
+        } @else {
+          #{$side}: #{$move} + "%";
+        }
+      }
+
+      @if map-has-key($grid-breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+          .#{$side}-#{$breakpoint}-#{$move} {
+            @if $move == 0 or $move == auto {
+              #{$side}: #{$move} !important;
+            } @else if $move == full {
+              #{$side}: 100% !important;
+            } @else if $move == 33 {
+              #{$side}: calc(100% / 3) !important;
+            } @else if $move == 66 {
+              #{$side}: calc(calc(100% / 3) * 2) !important;
+            } @else {
+              #{$side}: #{$move} + "%" !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.v-application {
+  @include position(md);
+  @include position(lg);
+  @include position(xl);
+  @include position-side(sm);
+  @include position-side(md);
+  @include position-side(lg);
+  @include position-side(xl);
+}

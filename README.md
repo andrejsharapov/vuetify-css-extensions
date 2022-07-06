@@ -9,6 +9,7 @@ Mini CSS extensions for Vuetify.js
 5. [vuetify-css-max-width.scss][max-width]
 6. [vuetify-css-opacity.scss][opacity]
 7. [vuetify-css-overflow.scss][overflow]
+8. [vuetify-css-position.scss][position]
 
 ## Use
 
@@ -54,5 +55,6 @@ Before you start using them, copy the variables you need and put them in your [v
 [max-width]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-max-width.scss
 [opacity]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-opacity.scss
 [overflow]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-overflow.scss
+[position]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/sass/extends/vuetify-css-position.scss
 [how-to-use-grid]: https://dev.to/andrejsharapov/vuetify-use-css-grid-classes-17nl
 [examples]: https://github.com/andrejsharapov/vuetify-css-extensions/tree/master/src/components
