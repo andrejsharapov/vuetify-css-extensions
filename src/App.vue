@@ -8,7 +8,7 @@
       </svg>
     </a>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <v-toolbar flat color="transparent">
           <v-toolbar-title class="grow d-sm-flex">
             <pre>window: {{ $vuetify.breakpoint.width }}px</pre>
@@ -32,6 +32,11 @@
           </v-expansion-panel>
 
           <v-expansion-panel>
+            <v-expansion-panel-header>max-width</v-expansion-panel-header>
+            <v-expansion-panel-content><CssMaxWidth /></v-expansion-panel-content>
+          </v-expansion-panel>
+
+          <v-expansion-panel>
             <v-expansion-panel-header>opacity</v-expansion-panel-header>
             <v-expansion-panel-content><CssOpacity /></v-expansion-panel-content>
           </v-expansion-panel>
@@ -48,6 +53,7 @@
 <script>
 import CssGrid from "./components/css-grid";
 import CssLineClamp from "./components/css-line-clamp";
+import CssMaxWidth from "./components/css-max-width";
 import CssOpacity from "./components/css-opacity";
 import CssBorder from "./components/css-border";
 import CssOverflow from "./components/css-overflow";
@@ -57,6 +63,7 @@ export default {
   components: {
     CssGrid,
     CssLineClamp,
+    CssMaxWidth,
     CssOpacity,
     CssBorder,
     CssOverflow,
