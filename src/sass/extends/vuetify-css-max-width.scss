@@ -1,0 +1,14 @@
+@mixin max-width($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    .max-w-#{$breakpoint} {
+      max-width: #{map-get($grid-breakpoints, $breakpoint)} !important;
+    }
+  }
+}
+
+.v-application {
+  @include max-width(sm);
+  @include max-width(md);
+  @include max-width(lg);
+  @include max-width(xl);
+}
